@@ -15,7 +15,6 @@
       "eslint-config-prettier": "^8.3.0",
       "eslint-plugin-prettier": "^4.0.0",
       "ts-node": "3.3.0",
-      "tsc-watch": "^4.6.0",
       "typescript": "3.3.3333"
    },
    "dependencies": {
@@ -31,7 +30,8 @@
       "passport-google-oauth": "^2.0.0",
       "pg": "^8.4.0",
       "reflect-metadata": "^0.1.10",
-      "typeorm": "0.2.41"
+      "typeorm": "0.2.41",
+      "tsc-watch": "^4.6.0"
    },
    "scripts": {
       "start": "tsc-watch --onSuccess \"node ./build/index.js\"",
