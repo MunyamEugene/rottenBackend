@@ -35,45 +35,37 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-require("module-alias/register");
 var typeorm_1 = require("typeorm");
-var seeds_1 = require("../../database/seeding/seeds");
-var serviceHotel_1 = require("../../database/entity/serviceHotel");
-var seeder1644863137253 = /** @class */ (function () {
-    function seeder1644863137253() {
+var seeds_1 = require("../seeding/seeds");
+var badservices1647592191467 = /** @class */ (function () {
+    function badservices1647592191467() {
     }
-    seeder1644863137253.prototype.up = function (queryRunner) {
+    badservices1647592191467.prototype.up = function (queryRunner) {
         return __awaiter(this, void 0, void 0, function () {
-            var newHotel, newService, newVote;
+            var _this = this;
             return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0: return [4 /*yield*/, typeorm_1.getRepository("hotel").save(seeds_1.hotel)];
-                    case 1:
-                        newHotel = _a.sent();
-                        return [4 /*yield*/, typeorm_1.getRepository("service").save(seeds_1.service)];
-                    case 2:
-                        newService = _a.sent();
-                        newVote = new serviceHotel_1.ServiceHotel();
-                        newVote.hotel = newHotel;
-                        newVote.service = newService;
-                        newVote.votes = 12;
-                        newVote.email = "eug@gmail.com";
-                        return [4 /*yield*/, typeorm_1.getRepository("service_hotel").save(newVote)];
-                    case 3:
-                        _a.sent();
-                        return [2 /*return*/];
-                }
+                seeds_1.badService.forEach(function (itm) { return __awaiter(_this, void 0, void 0, function () {
+                    return __generator(this, function (_a) {
+                        switch (_a.label) {
+                            case 0: return [4 /*yield*/, typeorm_1.getRepository('service').save(itm)];
+                            case 1:
+                                _a.sent();
+                                return [2 /*return*/];
+                        }
+                    });
+                }); });
+                return [2 /*return*/];
             });
         });
     };
-    seeder1644863137253.prototype.down = function (queryRunner) {
+    badservices1647592191467.prototype.down = function (queryRunner) {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 return [2 /*return*/];
             });
         });
     };
-    return seeder1644863137253;
+    return badservices1647592191467;
 }());
-exports.seeder1644863137253 = seeder1644863137253;
-//# sourceMappingURL=1644863137253-seeder.js.map
+exports.badservices1647592191467 = badservices1647592191467;
+//# sourceMappingURL=1647592191467-badservices.js.map

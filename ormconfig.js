@@ -14,7 +14,7 @@ module.exports={
     }
   },
    "synchronize": true,
-   "logging": false,
+   "logging": true,
    "entities": [
       "build/database/entity/**/*.js"
    ],
