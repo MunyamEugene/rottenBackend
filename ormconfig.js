@@ -10,17 +10,17 @@ module.exports={
    "synchronize": true,
    "logging": true,
    "entities": [
-      "build/database/entity/**/*.js"
+      "src/database/entity/**/*.ts"
    ],
    "migrations": [
-      "build/database/migration/**/*.js"
+      "src/database/migration/**/*.ts"
    ],
    "subscribers": [
-      "build/subscriber/**/*.js"
+      "src/subscriber/**/*.ts"
    ],
    "cli": {
-      "entitiesDir": "build/database/entity",
-      "migrationsDir": "build/database/migration",
-      "subscribersDir": "build/subscriber"
+      "entitiesDir": "src/database/entity",
+      "migrationsDir": "src/database/migration",
+      "subscribersDir": "src/subscriber"
    }
 }
