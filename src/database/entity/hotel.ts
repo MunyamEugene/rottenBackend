@@ -7,9 +7,9 @@ export class Hotel{
     id?: number;
     @Column()
     name: string;
-    @Column()
+    @Column({nullable:true})
     stars: number;
-    @Column()
+    @Column({nullable:true})
     location: string;
     @OneToMany(() => ServiceHotel, (serviceHotel: ServiceHotel) => serviceHotel.hotel)
     services?: ServiceHotel[];
