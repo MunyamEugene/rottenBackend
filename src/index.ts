@@ -10,6 +10,6 @@ import { AuthCtrl } from './resources/auth/authCtrl';
 createConnection().then(async connection => {
     const app = new App(
     [new HotelCtrl(),new ServiceCtrl(),new ServiceHoltelCtrl(),new AuthCtrl()],
-    Number(process.env.PORT));
+    Number(process.env.PORT||5000));
     app.listen()
 }).catch(error => console.log(error));
