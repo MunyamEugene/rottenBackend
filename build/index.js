@@ -47,7 +47,7 @@ var authCtrl_1 = require("./resources/auth/authCtrl");
 typeorm_1.createConnection().then(function (connection) { return __awaiter(_this, void 0, void 0, function () {
     var app;
     return __generator(this, function (_a) {
-        app = new app_1.App([new hotel_controller_1.HotelCtrl(), new service_controller_1.ServiceCtrl(), new serviceHotel_controller_1.ServiceHoltelCtrl(), new authCtrl_1.AuthCtrl()], Number(process.env.PORT));
+        app = new app_1.App([new hotel_controller_1.HotelCtrl(), new service_controller_1.ServiceCtrl(), new serviceHotel_controller_1.ServiceHoltelCtrl(), new authCtrl_1.AuthCtrl()], Number(process.env.PORT || 5000));
         app.listen();
         return [2 /*return*/];
     });
