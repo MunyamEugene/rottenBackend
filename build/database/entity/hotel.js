@@ -23,11 +23,11 @@ var Hotel = /** @class */ (function () {
         __metadata("design:type", String)
     ], Hotel.prototype, "name", void 0);
     __decorate([
-        typeorm_1.Column(),
+        typeorm_1.Column({ nullable: true }),
         __metadata("design:type", Number)
     ], Hotel.prototype, "stars", void 0);
     __decorate([
-        typeorm_1.Column(),
+        typeorm_1.Column({ nullable: true }),
         __metadata("design:type", String)
     ], Hotel.prototype, "location", void 0);
     __decorate([
