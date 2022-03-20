@@ -22,7 +22,7 @@ export class HotelCtrl implements Controller{
         const hotel = await this.hotelService.createHotel(newHotel);
         res.status(201).json({hotel})     
         } catch (error) {
-        res.status(400).json({error})
+        res.status(500).json({error})
         }
         }
     public update = async (req:Request,res:Response):Promise<Response|void>=>{
@@ -30,9 +30,9 @@ export class HotelCtrl implements Controller{
         const id= req.params.id;
         const body=req.body as Hotel;
         await this.hotelService.update(body,Number(id));
-        res.status(204).send({message:"Hotel update successfully"})
+        res.status(200).send({message:"Hotel update successfully"})
         } catch (error) {
-        res.status(400).send({error});
+        res.status(500).send({error});
         }
     }
 
